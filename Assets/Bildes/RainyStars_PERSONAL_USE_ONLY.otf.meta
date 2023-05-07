@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 52b4e38f6aaa6004e9ae7e5657e6227a
+timeCreated: 1683451960
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Rainy Stars PERSONAL USE
+  fontNames:
+  - Rainy Stars PERSONAL USE
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
