@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 // Import to use pointer events interface
@@ -7,17 +7,17 @@ using UnityEngine.EventSystems;
 // Attach interface
 public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
-    private RectTransform transform;
+    private RectTransform transformcomponent;
     private Canvas canvas;
-    private Transform character;
+    private Transform cilveks;
     public GameObject drebes;
 
     void Start()
     {
         // Access image's transform component and fix its coordinates
-        transform = GetComponent<RectTransform>();
+        transformcomponent = GetComponent<RectTransform>();
         canvas = GetComponentInParent<Canvas>();
-        character = GameObject.FindGameObjectWithTag("cilveks").transform;
+        cilveks = GameObject.FindGameObjectWithTag("cilveks").transform;
     }
 
     public void OnPointerDown(PointerEventData notikums)
@@ -34,12 +34,16 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
     public void OnDrag(PointerEventData notikums)
     {
         Debug.Log("Objekts tiek kustināts!");
-        transform.anchoredPosition += notikums.delta / canvas.scaleFactor;
+        transformcomponent.anchoredPosition += notikums.delta / canvas.scaleFactor;
     }
 
     public void OnEndDrag(PointerEventData notikums)
 {
+    if(cilveks){
+        transform.SetParent(cilveks);
+    }
     Debug.Log("Drag Pabeigts!");
+
 
    
 }
